@@ -17,7 +17,7 @@
 </div> <?php /* End .site-content */; ?>
 <footer class="bg-inverse text-white">
 	<div class="container text-center p-4">
-    <p><?php bloginfo( 'description' ); ?></p>
+
 		<p>Copyright &copy; <?php echo date("Y"); ?></p>
 	</div>
 </footer>

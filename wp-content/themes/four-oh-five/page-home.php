@@ -26,10 +26,8 @@ get_header(); ?>
 	while ( have_posts() ) : the_post(); ?>
 	<!-- if there is a post, show the post -->
 
-<div class="container-fluid py-4 ml-0 mr-0">
+<div class="container-fluid py-4 ml-3 mr-3">
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-				<div class = "container">
 
 					<div class= "row">
 						<div class= "col-sm-6">
@@ -39,51 +37,76 @@ get_header(); ?>
 						<div class= "col-12 col-sm-6">
 							<?php the_title( '<h1 class="display-4">', '</h1>' ); ?>
 							<!-- in the Home dashboard edit page, this is the "Title" -->
-							<?php if(the_field('home_subtitle')): ?>
+							<?php if(get_field('home_subtitle')): ?>
 								<!-- if the custom field named "home_subtitle" is filled out on the dashboard edit home page, then...... -->
-								<h1 class="display-4"><?php the_field('home_subtitle'); ?></h1>
+								<h2 class="display-6"><?php the_field('home_subtitle'); ?></h2>
 								<!-- then.... show what is typed in that field in a h2 tag right here. -->
 							<?php endif; ?>
 							<!-- reuse the above if endif statements for all advanced custom forms used on the home page -->
-							<?php
-							the_content();
-							fourohfive_edit_link( get_the_ID() ); ?>
+							<?php if(get_field('linkedin')): ?>
+								<a href = "<?php the_field('linkedin'); ?>" target="_blank"><button>linkedIn</button></a>
+								<?php endif; ?>
+											<?php fourohfive_edit_link( get_the_ID() ); ?>
 						</div>
 					</div>
-
 					<div class="row mt-5">
-						<div class="col-sm-6">
-						<h1>About Me</h1>
-							<?php if(the_field('about_me')): ?>
-								<!-- if the custom field named "home_subtitle" is filled out on the dashboard edit home page, then...... -->
-								<h1 class="display-4"><?php the_field('about_me'); ?></h1>
-								<!-- then.... show what is typed in that field in a h2 tag right here. -->
-							<?php endif; ?>
-							<!-- reuse the above if endif statements for all advanced custom forms used on the home page -->
-							<?php
-							fourohfive_edit_link( get_the_ID() ); ?>
+						<div class="col-sm-8 pl-5 pr-5">
+							<h2 class="display-6">About Me</h2>
+								<?php if(get_field('about_me')): ?>
+									<p><?php the_field('about_me'); ?></p>
+								<?php endif; ?>
 						</div>
-						<div class="col-sm-6">
-							<?php if(the_field('about_me_photo')): ?>
-								<!-- if the custom field named "home_subtitle" is filled out on the dashboard edit home page, then...... -->
-								<img src="<?php the_field('about_me_photo'); ?>"></img>
-								<!-- then.... show what is typed in that field in a h2 tag right here. -->
-							<?php endif; ?>
-							<!-- reuse the above if endif statements for all advanced custom forms used on the home page -->
-							<?php
-							fourohfive_edit_link( get_the_ID() ); ?>
+						<div class="col-sm-4">
+								<?php if(get_field('about_me_photo')): ?>
+									<img src="<?php the_field('about_me_photo'); ?>" alt="">
+								<?php endif; ?>
 						</div>
 					</div>
+					<div class="row mt-5">
+						<div class="col-sm-6 pl-5 pr-5">
+							<h2 class="display-6">My Skills</h2>
+							<!-- skills bars go here -->
+						</div>
+						<div class="col-sm-6 pl-5 pr-5">
+							<?php if(get_field('skills_description')): ?>
+									<p><?php the_field('skills_description'); ?></p>
+								<?php endif; ?>
+								<?php if(get_field('resume')): ?>
+									<button><a href = "<?php the_field('resume'); ?>"></a>View Resume</button>
+								<?php endif; ?>
+						</div>
+					</div>
+					<div class="row mt-5">
+						<div class="col-sm-12">
+						<h2 class="text-center">Portfolio</h2>
+							<?php
 
+							$images = get_field('portfolio');
 
-				</div>
-
+							if( $images ): ?>
+							    <ul>
+							        <?php foreach( $images as $image ): ?>
+							            <li class="float-left">
+							                <a href="<?php echo $image['url']; ?>">
+							                     <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
+							                </a>
+							                <p><?php echo $image['caption']; ?></p>
+							            </li>
+							        <?php endforeach; ?>
+							    </ul>
+							<?php endif; ?>
+						</div>
+					</div>
+					<div class="row mt-5">
+						<div class="col-sm-12">
+							<h2 class="text-center">Contact Me</h2>
+						</div>
+					</div>
 
 	</article>
 </div>
 
-	<?php endwhile;
-?>
+	<?php endwhile;?>
 
 <?php get_footer();
 
