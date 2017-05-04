@@ -21,12 +21,12 @@
  */
 
 get_header(); ?>
-
+<script src="https://use.fontawesome.com/c51cd9b84c.js"></script>
 <?php
 	while ( have_posts() ) : the_post(); ?>
 	<!-- if there is a post, show the post -->
 
-<div class="container-fluid py-4 ml-3 mr-3">
+<div class="container-fluid ml-3 mr-3">
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<!-- Hero Section -->
 					<div class= "row">
@@ -43,13 +43,15 @@ get_header(); ?>
 							<?php if(get_field('linkedin')): ?>
 <!-- linkedIn Button -->
 							<br />
-								<a href = "<?php the_field('linkedin'); ?>" target="_blank"><button type = "button" class="btn btn-primary">linkedIn</button></a>
+								<a href = "<?php the_field('linkedin'); ?>" target="_blank"><button type = "button" class="btn btn-primary"><i class="fa fa-linkedin-square" aria-hidden="true"></i>  linkedIn</button></a>
 								<?php endif; ?>
 						</div>
 					</div>
 					<div class="row mt-5">
+						<div class="col-sm-12">
+							<h2>About Me</h2>
+						</div>
 						<div class="col-sm-8 pl-5 pr-5">
-							<h2 class="display-6">About Me</h2>
 								<?php if(get_field('about_me')): ?>
 <!-- About Me Text -->
 									<p><?php the_field('about_me'); ?></p>
@@ -63,8 +65,10 @@ get_header(); ?>
 						</div>
 					</div>
 					<div class="row mt-5">
+						<div class="col-sm-12">
+							<h2>My Skills</h2>
+						</div>
 						<div class="col-sm-6 pl-5 pr-5">
-							<h2 class="display-6">My Skills</h2>
 <!-- skills bars go here -->
 						</div>
 						<div class="col-sm-6 pl-5 pr-5">
@@ -74,18 +78,20 @@ get_header(); ?>
 								<?php endif; ?>
 								<?php if(get_field('resume')): ?>
 <!-- Resume Button -->
-									<button type = "button" class="btn btn-primary"><a href = "<?php the_field('resume'); ?>"></a>View Resume</button>
+									<button type = "button" class="btn btn-primary"><i class="fa fa-download" aria-hidden="true"></i><a href = "<?php the_field('resume'); ?>"></a>  Download Resume</button>
 								<?php endif; ?>
 						</div>
 					</div>
-					<div class="row mt-5">
+					<div class="row mt-5 pl-5 pr-5">
+					<div class="col-sm-12">
+						<h2 class="text-center">Portfolio</h2>
+					</div>
 						<div class="col-sm-12">
-							<h2 class="text-center">Portfolio</h2>
 <!-- Portfolio Gallery-->
 								<?php
 								$images = get_field('portfolio');
 								if( $images ): ?>
-								    <ul>
+								    <ul class="list-unstyled">
 								        <?php foreach( $images as $image ): ?>
 								            <li class="float-left">
 								                <a href="<?php echo $image['url']; ?>">
@@ -99,13 +105,12 @@ get_header(); ?>
 						</div>
 					</div>
 					<div class="row mt-5">
-						<div class="col-sm-12">
+						<div class="col-sm-12 pl-5 pr-5">
 							<h2 class="text-center">Contact Me</h2>
 <!-- Contact Me Form -->
 							<?php the_content();?>
 						</div>
 					</div>
-
 	</article>
 </div>
 
