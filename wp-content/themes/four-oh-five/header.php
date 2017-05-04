@@ -14,6 +14,7 @@
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Catamaran:300,400,600,700" rel="stylesheet">
 		<style type="text/css">
 			.site {
 			  display: flex;

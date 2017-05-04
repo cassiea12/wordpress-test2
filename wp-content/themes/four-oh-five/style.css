@@ -350,7 +350,7 @@ html {
 }
 
 body {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Catamaran";
   font-size: 1rem;
   font-weight: normal;
   line-height: 1.5;
@@ -6641,7 +6641,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Catamaran";
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -6745,7 +6745,7 @@ button.close {
   display: block;
   max-width: 276px;
   padding: 1px;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Catamaran";
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -7123,147 +7123,6 @@ button.close {
   padding-bottom: 20px;
   color: #fff;
   text-align: center;
-}
-
-.widget_archive ul,
-.widget_categories ul,
-.widget_meta ul,
-.widget_pages ul,
-.widget_recent_entries ul,
-.widget_recent_comments ul {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.widget_archive li,
-.widget_categories li,
-.widget_meta li,
-.widget_pages li,
-.widget_recent_entries li,
-.widget_recent_comments li {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.widget_archive a,
-.widget_categories a,
-.widget_meta a,
-.widget_pages a,
-.widget_recent_entries a {
-  padding-left: 0;
-  padding-right: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 0%;
-      -ms-flex: 1 1 0%;
-          flex: 1 1 0%;
-}
-
-.widget_calendar table {
-  margin-bottom: 0;
-}
-
-.widget_calendar caption {
-  caption-side: top;
-}
-
-.comment .card, .comment .comment-respond {
-  margin: 1rem;
-}
-
-.pagination a[rel="prev"], .navigation.pagination .nav-links a[rel="prev"],
-.pagination a[rel="next"], .navigation.pagination .nav-links a[rel="next"] {
-  padding: 1rem;
-}
-
-.wp-caption {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.gallery-caption,
-.wp-caption-text {
-  font-style: italic;
-}
-
-.bypostauthor .card-header, .bypostauthor .widget_calendar caption, .widget_calendar .bypostauthor caption {
-  background-color: #0275d8;
-  color: #fff;
-}
-
-.alignright {
-  float: right;
-  margin-left: 1rem;
-}
-
-.aligncenter {
-  margin: 0 auto 1rem;
-}
-
-.alignleft {
-  float: left;
-  margin-right: 1rem;
-}
-
-figure,
-img {
-  height: auto !important;
-  max-width: 100% !important;
-}
-
-.sticky-footer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 100vh;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-/* Any one of the three selectors below is required for this to work. */
-main,
-[role="main"],
-.main,
-.container {
-  -webkit-box-flex: 1 !important;
-  -webkit-flex: 1 1 0% !important;
-      -ms-flex: 1 1 0% !important;
-          flex: 1 1 0% !important;
-}
-
-.navigation.pagination, .navigation.pagination .navigation.nav-links {
-  text-align: center;
-}
-
-.navigation.pagination .nav-links .page-numbers:first-child {
-  margin-left: 0;
-  border-bottom-left-radius: 0.25rem;
-  border-top-left-radius: 0.25rem;
-}
-
-.navigation.pagination .nav-links .page-numbers:last-child {
-  border-bottom-right-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-}
-
-.navigation.pagination .nav-links .page-numbers.current, .navigation.pagination .nav-links .page-numbers.current:focus, .navigation.pagination .nav-links .page-numbers.current:hover {
-  z-index: 2;
-  color: #fff;
-  cursor: default;
-  background-color: #0275d8;
-  border-color: #0275d8;
 }
 
 .align-baseline {
@@ -10533,5 +10392,150 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   .hidden-print {
     display: none !important;
   }
+}
+
+.widget_archive ul,
+.widget_categories ul,
+.widget_meta ul,
+.widget_pages ul,
+.widget_recent_entries ul,
+.widget_recent_comments ul {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.widget_archive li,
+.widget_categories li,
+.widget_meta li,
+.widget_pages li,
+.widget_recent_entries li,
+.widget_recent_comments li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.widget_archive a,
+.widget_categories a,
+.widget_meta a,
+.widget_pages a,
+.widget_recent_entries a {
+  padding-left: 0;
+  padding-right: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0%;
+      -ms-flex: 1 1 0%;
+          flex: 1 1 0%;
+}
+
+.widget_calendar table {
+  margin-bottom: 0;
+}
+
+.widget_calendar caption {
+  caption-side: top;
+}
+
+.comment .card, .comment .comment-respond {
+  margin: 1rem;
+}
+
+.pagination a[rel="prev"], .navigation.pagination .nav-links a[rel="prev"],
+.pagination a[rel="next"], .navigation.pagination .nav-links a[rel="next"] {
+  padding: 1rem;
+}
+
+.wp-caption {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.gallery-caption,
+.wp-caption-text {
+  font-style: italic;
+}
+
+.bypostauthor .card-header, .bypostauthor .widget_calendar caption, .widget_calendar .bypostauthor caption {
+  background-color: #0275d8;
+  color: #fff;
+}
+
+.alignright {
+  float: right;
+  margin-left: 1rem;
+}
+
+.aligncenter {
+  margin: 0 auto 1rem;
+}
+
+.alignleft {
+  float: left;
+  margin-right: 1rem;
+}
+
+figure,
+img {
+  height: auto !important;
+  max-width: 100% !important;
+}
+
+.sticky-footer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* Any one of the three selectors below is required for this to work. */
+main,
+[role="main"],
+.main,
+.container {
+  -webkit-box-flex: 1 !important;
+  -webkit-flex: 1 1 0% !important;
+      -ms-flex: 1 1 0% !important;
+          flex: 1 1 0% !important;
+}
+
+.navigation.pagination, .navigation.pagination .navigation.nav-links {
+  text-align: center;
+}
+
+.navigation.pagination .nav-links .page-numbers:first-child {
+  margin-left: 0;
+  border-bottom-left-radius: 0.25rem;
+  border-top-left-radius: 0.25rem;
+}
+
+.navigation.pagination .nav-links .page-numbers:last-child {
+  border-bottom-right-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.navigation.pagination .nav-links .page-numbers.current, .navigation.pagination .nav-links .page-numbers.current:focus, .navigation.pagination .nav-links .page-numbers.current:hover {
+  z-index: 2;
+  color: #fff;
+  cursor: default;
+  background-color: #0275d8;
+  border-color: #0275d8;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-family: "Catamaran";
 }
 /*# sourceMappingURL=bootstrap.css.map */
