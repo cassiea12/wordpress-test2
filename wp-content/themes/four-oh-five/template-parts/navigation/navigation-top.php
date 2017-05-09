@@ -23,7 +23,7 @@
     <p class="h6 m-0"><a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
   <?php endif; ?>
 
-  <div class="collapse navbar-collapse">
+  <div class="collapse navbar-collapse justify-content-end">
     <?php
       wp_nav_menu([
         'menu'            => 'top',
@@ -39,8 +39,6 @@
       ]);
     ?>
 
-    <div class=" ml-md-auto">
-      <?php get_search_form(); ?>
-    </div>
+
   </div>
 </header>
