@@ -10571,18 +10571,30 @@ main,
 }
 
 h1, h2, h3, h4, h5, h6, p {
-  font-family: "Catamaran";
+  font-family: $font-family-base;
+}
+
+.gform_button {
+  @extend .btn;
+  background-color: #da0000;
+  border: none;
+}
+
+.gform_button:hover {
+	background-color: #8a0000;
+  border-color: #8a0000;
+  color: #ffffff;
 }
 
 .bg-myblack {
-  background-color: black;
+  background-color: #000000;
 }
 
 .bg-mygrey {
-  background-color: #f3f3f3;
+  background-color: #f6f6f6;
 }
 
-.bg-myred {
+.bg-myred{
   background-color: #da0000;
 }
 
@@ -10594,17 +10606,61 @@ h1, h2, h3, h4, h5, h6, p {
   color: #da0000;
 }
 
+.text-myblack {
+  color: black;
+}
+
+.btn-red {
+  background-color: #da0000;
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.btn:hover{
+  background-color: #8a0000;
+  border-color: #8a0000;
+  color: #ffffff;
+}
+
 .progress-bar {
-  padding: .5rem;
+  padding: .7rem;
   text-align: left;
   height: 100%;
+  font-size: 15px;
 }
 
 .progress {
-  background-color: #c7c7c7;
+  background-color: #232323;
 }
 
 .lineheight {
   line-height: 1.4;
 }
+
+.padding-skills {
+  padding-left: 23.5rem;
+}
+
+.bg-laptop {
+  background-image: url("assets/images/laptop.jpg");
+  background-size: 235%;
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+.bg-keyboard {
+  background-image: url("assets/images/keyboard.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center to;
+}
+
+.bg-bridge {
+  background-image: url("assets/images/bridge.jpg");
+  -webkit-background-size: 235% 235%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
 /*# sourceMappingURL=bootstrap.css.map */

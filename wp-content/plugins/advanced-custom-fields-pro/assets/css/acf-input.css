@@ -710,23 +710,23 @@ html[dir="rtl"] ul.acf-checkbox-list input[type="radio"] {
 	background: #fff;
 	border: #dddddd solid 1px;
 	height: 30px;
-	
+
 	span {
 		padding: 3px 10px;
 	}
-	
-	.acf-switch-slider { 
+
+	.acf-switch-slider {
 		background: #f9f9f9;
 		border: #bbbbbb solid 1px;
 		box-shadow: none;
 		margin: 3px;
 	}
-	
-	
+
+
 	&.-on {
 		border-color: #2c91fc;
 		background: @acf_blue_input2;
-		
+
 		.acf-switch-slider {
 			background: #fff;
 			border-color: darken(@acf_blue_input2, 20%);
@@ -734,13 +734,13 @@ html[dir="rtl"] ul.acf-checkbox-list input[type="radio"] {
 		}
 	}
 
-	
+
 }
 */
 /*--------------------------------------------------------------------------
 *
 *	Google Map
-*	
+*
 *-------------------------------------------------------------------------*/
 .acf-google-map {
   position: relative;
@@ -848,7 +848,7 @@ html[dir="rtl"] .pac-container .pac-item {
 /*--------------------------------------------------------------------------
 *
 *	Relationship
-*	
+*
 *-------------------------------------------------------------------------*/
 .acf-relationship {
   background: #fff;
@@ -1006,7 +1006,7 @@ html[dir="rtl"] .acf-relationship .selection .values .acf-icon {
 /*--------------------------------------------------------------------------
 *
 *	WYSIWYG
-*	
+*
 *-------------------------------------------------------------------------*/
 .acf-editor-wrap {
   /* delay */
@@ -2139,7 +2139,7 @@ p.submit .acf-spinner {
 /*--------------------------------------------------------------------------
 *
 *	Conditional Logic
-*	
+*
 *-------------------------------------------------------------------------*/
 /* Hide */
 .hidden-by-conditional-logic {
@@ -2155,7 +2155,7 @@ p.submit .acf-spinner {
 /*--------------------------------------------------------------------------
 *
 *	3rd Party
-*	
+*
 *-------------------------------------------------------------------------*/
 /* Tabify shows hidden postboxes */
 .acf-postbox.acf-hidden {

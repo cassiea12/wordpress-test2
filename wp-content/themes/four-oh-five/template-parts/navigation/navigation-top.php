@@ -10,7 +10,7 @@
 
 ?>
 
-<header class="navbar navbar-toggleable-md navbar-light bg-faded">
+<header class="navbar navbar-toggleable-md navbar-light bg-mywhite">
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#bs4navbar" aria-controls="bs4navbar" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>

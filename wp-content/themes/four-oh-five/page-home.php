@@ -24,16 +24,14 @@ get_header(); ?>
 <script src="https://use.fontawesome.com/c51cd9b84c.js"></script>
 <?php
 	while ( have_posts() ) : the_post(); ?>
-	<!-- if there is a post, show the post -->
-
 <div class="container-fluid pl-3 pr-3">
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<!-- Hero Section -->
-					<div class= "row pt-3 pb-3 bg-myblack">
+<!-- Hero Section -->
+					<div class= "row pb-3 bg-myblack">
 						<div class= "col-sm-7">
 							<img src="<?php the_post_thumbnail_url( 'full' ); ?>" alt="">
 						</div>
-						<div class= "col-sm-5 pt-4">
+						<div class= "col-sm-5 pt-5 bg-laptop">
 <!-- Hero Title -->
 							<?php the_title( '<h1 class="display-4 text-mywhite">', '</h1>' ); ?>
 							<?php if(get_field('home_subtitle')): ?>
@@ -43,32 +41,32 @@ get_header(); ?>
 							<?php if(get_field('linkedin')): ?>
 <!-- linkedIn Button -->
 							<br />
-								<a href = "<?php the_field('linkedin'); ?>" target="_blank"><button type = "button" class="btn btn-primary"><i class="fa fa-linkedin-square" aria-hidden="true"></i>  linkedIn</button></a>
+								<a href = "<?php the_field('linkedin'); ?>" target="_blank"><button type = "button" class="btn btn-red"><i class="fa fa-linkedin-square" aria-hidden="true"></i>  linkedIn</button></a>
 								<?php endif; ?>
 						</div>
 					</div>
-					<div class="row pt-5 pb-5 pl-5 pr-5" id="aboutme">
+					<div class="row pt-5 pb-5 pl-5 pr-5 mb-4 bg-bridge" id="aboutme">
 						<div class="col-sm-12">
 							<h2 class="text-myred">About Me</h2>
 						</div>
-						<div class="col-sm-8 pl-5 pr-5 pt-5">
+						<div class="col-sm-12 col-md-8 pl-5 pr-5 pt-5">
 								<?php if(get_field('about_me')): ?>
 <!-- About Me Text -->
 									<p class="h5 lineheight"><?php the_field('about_me'); ?></p>
 								<?php endif; ?>
 						</div>
-						<div class="col-sm-4">
+						<div class="col-sm-12 col-md-4 text-center" style="border-radius:0% 30%;">
 								<?php if(get_field('about_me_photo')): ?>
 <!-- About Me Photo -->
-									<img style="width:70%; border-radius: 50%;" src="<?php the_field('about_me_photo'); ?>" alt="">
+									<img style="width:65%; border-radius: 50%; border: solid white 5px;" src="<?php the_field('about_me_photo'); ?>" alt="">
 								<?php endif; ?>
 						</div>
 					</div>
-					<div class="row pt-5 pb-5 pl-5 pr-5 bg-mygrey" id="myskills">
+					<div class="row pt-5 pb-5 pl-5 pr-5 mt-4 bg-mygrey" id="myskills">
 						<div class="col-sm-12">
 							<h2>My Skills</h2>
 						</div>
-						<div class="col-sm-6 pl-5 pr-5 pt-5">
+						<div class="col-sm-12 col-md-6 pl-5 pr-5 pt-5">
 <!-- skills bars go here -->
 							<?php
 							// check if the repeater field has rows of data
@@ -83,11 +81,10 @@ get_header(); ?>
 										echo '</div>';
 							    endwhile;
 							else :
-							    // no rows found
 							endif;
 							?>
 						</div>
-						<div class="col-sm-6 pl-5 pr-5 pt-5">
+						<div class="col-sm-12 col-md-6 pl-5 pr-5 pt-5">
 							<?php if(get_field('skills_description')): ?>
 <!-- Skills Text -->
 									<p class="h5 lineheight"><?php the_field('skills_description'); ?></p>
@@ -95,33 +92,36 @@ get_header(); ?>
 								<?php if(get_field('resume')): ?>
 									<br />
 <!-- Resume Button -->
-									<a class="btn btn-primary" href="<?php the_field('resume'); ?>"><i class="fa fa-download" aria-hidden="true"></i> View Resume</a>
+									<a class="btn btn-red" href="<?php the_field('resume'); ?>"><i class="fa fa-download" aria-hidden="true"></i> View My Resume</a>
+									<a class="btn btn-red" href="<?php the_field('github'); ?>" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> View My GitHub</a>
 								<?php endif; ?>
 						</div>
 					</div>
 					<div class="row pt-5 pb-5 pl-5 pr-5" id="myportfolio">
-					<div class="col-sm-12">
-						<h2 class="text-center text-myred">Portfolio</h2>
-					</div>
+						<div class="col-sm-12">
+							<h2 class="text-center text-myred">Portfolio</h2>
+						</div>
 						<div class="col-sm-12 pt-5">
 <!-- Portfolio Gallery-->
 								<?php
 								$images = get_field('portfolio');
 								if( $images ): ?>
-								    <ul class="list-unstyled">
+								    <div class="row">
 								        <?php foreach( $images as $image ): ?>
-								            <li class="float-left">
-								                <a href="<?php echo $image['url']; ?>">
-								                     <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
-								                </a>
-								                <p><?php echo $image['caption']; ?></p>
-								            </li>
+								            <div class="col-md-4">
+								            	<strong><?php echo $image['alt']; ?></strong><br />
+								               <a href="<?php echo $image['description']; ?>" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> View on Github</a>
+								               <a href="<?php echo $image['url']; ?>">
+								               	<img class="img-fluid" src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" />
+								               </a>
+								               <p><?php echo $image['caption']; ?></p>
+								            </div>
 								        <?php endforeach; ?>
-								    </ul>
+								    </div>
 								<?php endif; ?>
 						</div>
 					</div>
-					<div class="row pt-5 pb-5 pl-5 pr-5" id="contactme">
+					<div class="row pt-5 pb-5 pl-5 pr-5 bg-keyboard" id="contactme">
 						<div class="col-sm-12 pl-5 pr-5 pt-5">
 							<h2 class="text-center">Contact Me</h2>
 <!-- Contact Me Form -->
@@ -134,7 +134,5 @@ get_header(); ?>
 					</div>
 	</article>
 </div>
-
 	<?php endwhile;?>
 <?php get_footer();
-
